@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import api from '../api/api';
 import { useAuth } from '../context/AuthContext';
+import { useToast } from '../context/ToastContext';
 import { PILLARS, MURANGA_SUB_COUNTIES, CLAN_DATA, TOWN_SPECIALIZATIONS } from '../utils/constants';
 
 const SubmissionWorkspace = () => {
@@ -22,6 +23,7 @@ const SubmissionWorkspace = () => {
   const navigate = useNavigate();
   const locationState = useLocation().state;
   const { userInfo } = useAuth();
+  const { showToast } = useToast();
   const userLocation = userInfo?.location || {};
 
   const [formData, setFormData] = useState({
@@ -127,7 +129,7 @@ const SubmissionWorkspace = () => {
       setTimeout(() => navigate('/dashboard'), 2000);
     } catch (err) {
       console.error('Submission failed:', err.response?.data || err.message);
-      alert(`Submission failed: ${err.response?.data?.message || 'Check your data'}`);
+      showToast(`Submission failed: ${err.response?.data?.message || 'Check your data'}`, 'error');
     } finally {
       setLoading(false);
     }

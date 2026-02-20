@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import api from '../api/api';
 import { useAuth } from '../context/AuthContext';
+import { useToast } from '../context/ToastContext';
 import { PlusCircle, FileText, CheckCircle, Clock } from 'lucide-react';
 
 const ContributorDashboard = () => {
   const [submissions, setSubmissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const { userInfo } = useAuth();
+  const { showToast } = useToast();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,8 +40,9 @@ const ContributorDashboard = () => {
       try {
         await api.delete(`/submissions/${id}`);
         setSubmissions(prev => prev.filter(sub => sub._id !== id));
+        showToast('Submission deleted successfully', 'success');
       } catch (err) {
-        alert('Failed to delete submission');
+        showToast('Failed to delete submission', 'error');
       }
     }
   };

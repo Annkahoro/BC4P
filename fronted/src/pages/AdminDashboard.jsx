@@ -49,8 +49,9 @@ const AdminDashboard = () => {
       link.setAttribute('download', 'bc4p_submissions.csv');
       document.body.appendChild(link);
       link.click();
+      showToast('Data report exported successfully', 'success');
     } catch (err) {
-      alert('Export failed');
+      showToast('Export failed', 'error');
     }
   };
 

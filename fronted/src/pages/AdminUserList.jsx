@@ -34,8 +34,9 @@ const AdminUserList = () => {
     try {
       await api.delete(`/admin/users/${user._id}`);
       setUsers(users.filter(u => u._id !== user._id));
+      showToast(`${user.name} and all data deleted`, 'success');
     } catch (err) {
-      alert(err.response?.data?.message || 'Deletion failed');
+      showToast(err.response?.data?.message || 'Deletion failed', 'error');
     }
   };
 

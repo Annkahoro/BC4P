@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import api from '../api/api';
 import AdminLayout from '../components/AdminLayout';
+import { useToast } from '../context/ToastContext';
 import { 
   FileText, 
   Search, 
@@ -23,6 +24,7 @@ const AdminSubmissionList = () => {
     county: searchParams.get('county') || '',
     user: searchParams.get('user') || '' 
   });
+  const { showToast } = useToast();
   const navigate = useNavigate();
 
   const fetchSubmissions = async () => {
@@ -47,8 +49,9 @@ const AdminSubmissionList = () => {
     try {
       await api.delete(`/submissions/${id}`);
       setSubmissions(submissions.filter(s => s._id !== id));
+      showToast('Submission removed from registry', 'success');
     } catch (err) {
-      alert('Delete failed');
+      showToast('Delete failed', 'error');
     }
   };
 

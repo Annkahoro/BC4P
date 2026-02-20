@@ -50,8 +50,9 @@ const AdminSubmissionReview = () => {
     try {
       await api.put(`/submissions/${id}/status`, { status, adminNotes });
       setSub(prev => ({ ...prev, status, adminNotes }));
+      showToast(`Status updated to ${status}`, 'success');
     } catch {
-      alert('Update failed');
+      showToast('Update failed', 'error');
     } finally {
       setUpdating(false);
     }
@@ -62,9 +63,10 @@ const AdminSubmissionReview = () => {
     setDeleting(true);
     try {
       await api.delete(`/submissions/${id}`);
+      showToast('Submission deleted permanently', 'success');
       navigate('/admin/submissions');
     } catch {
-      alert('Delete failed');
+      showToast('Delete failed', 'error');
     } finally {
       setDeleting(false);
     }

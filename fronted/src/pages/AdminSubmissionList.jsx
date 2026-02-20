@@ -24,7 +24,7 @@ const AdminSubmissionList = () => {
     county: searchParams.get('county') || '',
     user: searchParams.get('user') || '' 
   });
-  const { showToast } = useToast();
+  const { showToast, confirm } = useToast();
   const navigate = useNavigate();
 
   const fetchSubmissions = async () => {
@@ -45,7 +45,8 @@ const AdminSubmissionList = () => {
   }, [filters]);
 
   const handleDelete = async (id) => {
-    if (!window.confirm('Delete this submission?')) return;
+    const isConfirmed = await confirm('Delete this submission?');
+    if (!isConfirmed) return;
     try {
       await api.delete(`/submissions/${id}`);
       setSubmissions(submissions.filter(s => s._id !== id));

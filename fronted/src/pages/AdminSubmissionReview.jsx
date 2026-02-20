@@ -28,6 +28,7 @@ const AdminSubmissionReview = () => {
   const [adminNotes, setAdminNotes] = useState('');
   const [updating, setUpdating] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const { showToast, confirm } = useToast();
   const [lightbox, setLightbox] = useState(null); // { url, type }
 
   useEffect(() => {
@@ -59,7 +60,8 @@ const AdminSubmissionReview = () => {
   };
 
   const handleDelete = async () => {
-    if (!window.confirm('Permanently delete this submission? This cannot be undone.')) return;
+    const isConfirmed = await confirm('Permanently delete this submission? This cannot be undone.');
+    if (!isConfirmed) return;
     setDeleting(true);
     try {
       await api.delete(`/submissions/${id}`);

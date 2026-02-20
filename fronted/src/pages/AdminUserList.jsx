@@ -13,6 +13,7 @@ import {
 const AdminUserList = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { showToast, confirm } = useToast();
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -29,7 +30,8 @@ const AdminUserList = () => {
   }, []);
 
   const handleDeleteUser = async (user) => {
-    if (!window.confirm(`CRITICAL ACTION: Permanently delete ${user.name} and ALL their data? This cannot be undone.`)) return;
+    const isConfirmed = await confirm(`CRITICAL ACTION: Permanently delete ${user.name} and ALL their data? This cannot be undone.`);
+    if (!isConfirmed) return;
     
     try {
       await api.delete(`/admin/users/${user._id}`);

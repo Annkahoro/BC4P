@@ -9,7 +9,7 @@ const ContributorDashboard = () => {
   const [submissions, setSubmissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const { userInfo } = useAuth();
-  const { showToast } = useToast();
+  const { showToast, confirm } = useToast();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,7 +36,8 @@ const ContributorDashboard = () => {
 
   /* ── Delete Logic ── */
   const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this submission?')) {
+    const isConfirmed = await confirm('Are you sure you want to delete this submission?');
+    if (isConfirmed) {
       try {
         await api.delete(`/submissions/${id}`);
         setSubmissions(prev => prev.filter(sub => sub._id !== id));

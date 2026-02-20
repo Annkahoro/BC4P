@@ -32,6 +32,6 @@
     - [x] Implement Admin User Deletion (Backend) <!-- id: 21.1 -->
     - [x] Implement Admin User Deletion (Frontend) <!-- id: 21.2 -->
     - [x] Cascade Delete Submissions for Removed Users <!-- id: 21.3 -->
-- [/] UI/UX Polish <!-- id: 22 -->
-    - [ ] Implement Premium Toast Notification System <!-- id: 22.1 -->
-    - [ ] Replace all alerts with Custom Popups <!-- id: 22.2 -->
+- [x] UI/UX Polish <!-- id: 22 -->
+    - [x] Implement Premium Toast Notification System <!-- id: 22.1 -->
+    - [x] Replace all alerts with Custom Popups <!-- id: 22.2 -->

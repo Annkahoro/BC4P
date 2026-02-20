@@ -37,5 +37,5 @@
     - [x] Replace all alerts with Custom Popups <!-- id: 22.2 -->
     - [x] Add Password Visibility Toggle (Eye Icon) to Login Pages <!-- id: 22.3 -->
     - [x] Make Admin Dashboard & Sidebar Responsive for Mobile <!-- id: 22.4 -->
-    - [ ] Make Navbar & Landing Page Responsive for Mobile <!-- id: 22.5 -->
-    - [ ] Make Contributor Dashboard & Workspace Responsive for Mobile <!-- id: 22.6 -->
+    - [x] Make Navbar & Landing Page Responsive for Mobile <!-- id: 22.5 -->
+    - [x] Make Contributor Dashboard & Workspace Responsive for Mobile <!-- id: 22.6 -->

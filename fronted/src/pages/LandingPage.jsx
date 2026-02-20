@@ -367,8 +367,8 @@ const LandingPage = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
           <a
-            href="#register"
-            onClick={e => { e.preventDefault(); scrollTo('register'); }}
+            href="#registration-form"
+            onClick={e => { e.preventDefault(); scrollTo('registration-form'); }}
             className="w-full sm:w-auto bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary-dark transition-colors flex items-center justify-center gap-2 shadow-xl shadow-primary/20"
           >
             Start Documenting <ArrowRight size={18} />
@@ -541,7 +541,7 @@ const LandingPage = () => {
             </div>
 
             {/* Right: form */}
-            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-xl">
+            <div id="registration-form" className="bg-white border border-gray-200 rounded-3xl p-8 shadow-xl">
               <h3 className="text-2xl font-black text-secondary mb-1">Create Your Account</h3>
               <p className="text-gray-400 text-sm font-medium mb-6">Contributor Registration</p>
               <RegistrationForm />

@@ -20,11 +20,11 @@ const Navbar = () => {
   const navToRegister = () => {
     setIsOpen(false);
     if (window.location.pathname === '/') {
-      document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
     } else {
       navigate('/');
       setTimeout(() => {
-        document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
       }, 500);
     }
   };

@@ -38,7 +38,7 @@ router.post('/', protect, upload.array('files', 10), async (req, res) => {
       tags: typeof tags === 'string' ? JSON.parse(tags) : tags,
       metadata: typeof metadata === 'string' ? JSON.parse(metadata) : metadata,
       isLinkedToAncestralLand: isLinkedToAncestralLand === 'true',
-      files: fileData
+      files: files
     });
 
     res.status(201).json(submission);

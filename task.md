@@ -1,0 +1,27 @@
+# Task: Build BC4P Data Collection Platform (MERN)
+
+- [x] Research uploaded files <!-- id: 0 -->
+- [x] Planning Data Collection Platform <!-- id: 5 -->
+    - [x] Create MERN implementation plan <!-- id: 6 -->
+- [/] Implement Backend Foundation <!-- id: 8 -->
+    - [x] Initialize Node/Express project <!-- id: 9 -->
+    - [x] Set up Specialized Auth (Phone/Name for users, Email/Pass for Admin) <!-- id: 10 -->
+    - [x] Connect MongoDB and Cloudinary <!-- id: 11 -->
+    - [x] Design detailed Mongoose schemas for 5 Pillars (Cultural Workspace logic) <!-- id: 11.5 -->
+    - [x] Integrate Clan & Town Specialization Data (Registration & Constants) <!-- id: 11.6 -->
+- [/] Implement Backend API Roles & Workflows <!-- id: 12 -->
+    - [x] Auth Routes with specialized logic <!-- id: 12.1 -->
+    - [x] Submission API with multi-pillar logic <!-- id: 13 -->
+    - [x] Multi-media upload API (Cloudinary) <!-- id: 14 -->
+    - [ ] Admin Review and Filtering APIs <!-- id: 15 -->
+- [ ] Verification (Backend) <!-- id: 16 -->
+    - [/] Seed Super Admin account <!-- id: 16.1 -->
+    - [ ] Test all API endpoints <!-- id: 17 -->
+- [ ] Frontend Implementation (React) <!-- id: 18 -->
+    - [x] Contributor Dashboard with full CDUD (Edit resets Approved status) <!-- id: 18.1 -->
+    - [x] Optimized Multi-File Upload (Unique Filenames) <!-- id: 18.2 -->
+    - [x] Enhanced Document Handling (PDF & Office as 'raw') <!-- id: 18.3 -->
+    - [x] Integrated Document Viewer (Google Docs Embed) <!-- id: 18.4 -->
+- [ ] Deployment Optimization <!-- id: 19 -->
+    - [ ] Implement Premium Preloader for Render Free Tier <!-- id: 19.1 -->
+    - [x] Integrated Document Viewer (Google Docs Embed) <!-- id: 18.4 -->

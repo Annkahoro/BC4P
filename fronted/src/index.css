@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #27ae60;
+  --color-primary-dark: #1e8449;
+  --color-secondary: #1a2332;
+  --color-secondary-light: #243447;
+  --color-accent: #6c5ce7;
+  --color-accent-dark: #4834d4;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f9fafb;
+  color: #1a2332;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+/* ─── Global Input & Select Styles ──────────────────────────────────────── */
+/* Used via className="input" or className="input-field" across all pages   */
+
+.input,
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a2332;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  /* text inputs get the default I-beam cursor */
+  cursor: text;
+}
+
+/* selects get a pointer to indicate they are clickable */
+select.input,
+select.input-field,
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+.input:focus,
+.input-field:focus {
+  border-color: #27ae60;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.12);
+}
+
+.input:hover,
+.input-field:hover {
+  border-color: #d1d5db;
+}
+
+/* Arrow for select elements */
+select.input,
+select.input-field {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}
+
+/* ─── Label style ────────────────────────────────────────────────────────── */
+.label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 6px;
+  padding-left: 2px;
+}

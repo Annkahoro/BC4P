@@ -22,6 +22,9 @@
     - [x] Optimized Multi-File Upload (Unique Filenames) <!-- id: 18.2 -->
     - [x] Enhanced Document Handling (PDF & Office as 'raw') <!-- id: 18.3 -->
     - [x] Integrated Document Viewer (Google Docs Embed) <!-- id: 18.4 -->
-- [ ] Deployment Optimization <!-- id: 19 -->
-    - [ ] Implement Premium Preloader for Render Free Tier <!-- id: 19.1 -->
-    - [x] Integrated Document Viewer (Google Docs Embed) <!-- id: 18.4 -->
+- [x] Deployment Optimization <!-- id: 19 -->
+    - [x] Implement Premium Preloader for Render Free Tier <!-- id: 19.1 -->
+    - [x] Push Project to GitHub (Annkahoro Repository) <!-- id: 19.2 -->
+- [/] Production Troubleshooting <!-- id: 20 -->
+    - [ ] Fix SPA Routing 404 for Static Site <!-- id: 20.1 -->
+    - [ ] Verify Cross-Origin Data Fetching (CORS/API URL) <!-- id: 20.2 -->

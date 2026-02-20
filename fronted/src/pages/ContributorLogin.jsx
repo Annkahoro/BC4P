@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api/api';
 import { useAuth } from '../context/AuthContext';
 
 const ContributorLogin = () => {
@@ -17,7 +17,7 @@ const ContributorLogin = () => {
     setError('');
     
     try {
-      const { data } = await axios.post('http://localhost:5000/api/auth/login', { phone });
+      const { data } = await api.post('/auth/login', { phone });
       login(data);
       navigate('/dashboard');
     } catch (err) {

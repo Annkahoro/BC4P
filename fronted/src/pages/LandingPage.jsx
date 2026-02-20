@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api/api.js';
 import { useAuth } from '../context/AuthContext';
 import { REGISTRATION_COUNTY, MURANGA_SUB_COUNTIES, CLAN_DATA, TOWN_SPECIALIZATIONS } from '../utils/constants';
 // ── LOGO IMAGE ──────────────────────────────────────────────────────────────
@@ -179,8 +179,8 @@ const RegistrationForm = () => {
     }
 
     try {
-      const res = await axios.post(
-        'http://localhost:5000/api/auth/register',
+      const res = await api.post(
+        '/auth/register',
         data,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );

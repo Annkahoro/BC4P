@@ -1,0 +1,27 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: bc4p-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+
+  # Frontend Static Site
+  - type: static
+    name: bc4p-frontend
+    env: static
+    plan: free
+    rootDir: fronted
+    buildCommand: npm install && npm run build
+    publishDir: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

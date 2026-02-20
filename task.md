@@ -25,6 +25,6 @@
 - [x] Deployment Optimization <!-- id: 19 -->
     - [x] Implement Premium Preloader for Render Free Tier <!-- id: 19.1 -->
     - [x] Push Project to GitHub (Annkahoro Repository) <!-- id: 19.2 -->
-- [/] Production Troubleshooting <!-- id: 20 -->
-    - [ ] Fix SPA Routing 404 for Static Site <!-- id: 20.1 -->
-    - [ ] Verify Cross-Origin Data Fetching (CORS/API URL) <!-- id: 20.2 -->
+- [x] Production Troubleshooting <!-- id: 20 -->
+    - [x] Fix SPA Routing 404 for Static Site <!-- id: 20.1 -->
+    - [x] Verify Cross-Origin Data Fetching (CORS/API URL) <!-- id: 20.2 -->

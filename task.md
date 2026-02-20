@@ -28,3 +28,7 @@
 - [x] Production Troubleshooting <!-- id: 20 -->
     - [x] Fix SPA Routing 404 for Static Site <!-- id: 20.1 -->
     - [x] Verify Cross-Origin Data Fetching (CORS/API URL) <!-- id: 20.2 -->
+- [/] User Management Improvements <!-- id: 21 -->
+    - [ ] Implement Admin User Deletion (Backend) <!-- id: 21.1 -->
+    - [ ] Implement Admin User Deletion (Frontend) <!-- id: 21.2 -->
+    - [ ] Cascade Delete Submissions for Removed Users <!-- id: 21.3 -->

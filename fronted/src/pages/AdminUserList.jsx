@@ -6,7 +6,8 @@ import {
   MapPin, 
   Phone, 
   Calendar,
-  Grid
+  Grid,
+  Trash2
 } from 'lucide-react';
 
 const AdminUserList = () => {
@@ -26,6 +27,17 @@ const AdminUserList = () => {
     };
     fetchUsers();
   }, []);
+
+  const handleDeleteUser = async (user) => {
+    if (!window.confirm(`CRITICAL ACTION: Permanently delete ${user.name} and ALL their data? This cannot be undone.`)) return;
+    
+    try {
+      await api.delete(`/admin/users/${user._id}`);
+      setUsers(users.filter(u => u._id !== user._id));
+    } catch (err) {
+      alert(err.response?.data?.message || 'Deletion failed');
+    }
+  };
 
   return (
     <AdminLayout>
@@ -69,12 +81,21 @@ const AdminUserList = () => {
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-gray-50">
-                    <button 
-                        onClick={() => window.location.href = `/admin/submissions?user=${user._id}`}
-                        className="w-full py-3 bg-gray-50 hover:bg-primary/10 text-gray-400 hover:text-primary font-black uppercase text-[10px] tracking-widest rounded-xl transition-all flex items-center justify-center gap-2"
-                    >
-                        <Grid size={14} /> View All Activity
-                    </button>
+                    <div className="flex gap-2">
+                        <button 
+                            onClick={() => window.location.href = `/admin/submissions?user=${user._id}`}
+                            className="flex-1 py-3 bg-gray-50 hover:bg-primary/10 text-gray-400 hover:text-primary font-black uppercase text-[10px] tracking-widest rounded-xl transition-all flex items-center justify-center gap-2"
+                        >
+                            <Grid size={14} /> Activity
+                        </button>
+                        <button 
+                            onClick={() => handleDeleteUser(user)}
+                            className="px-4 py-3 bg-red-50 hover:bg-red-500 text-red-300 hover:text-white rounded-xl transition-all"
+                            title="Delete Contributor"
+                        >
+                            <Trash2 size={14} />
+                        </button>
+                    </div>
                 </div>
               </div>
             ))}

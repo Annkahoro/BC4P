@@ -77,4 +77,31 @@ router.get('/export', protect, admin, async (req, res) => {
   }
 });
 
+// @desc    Delete user and all their submissions (Admin only)
+// @route   DELETE /api/admin/users/:id
+// @access  Private/Admin
+router.delete('/users/:id', protect, admin, async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Protection against deleting self
+    if (user._id.toString() === req.user._id.toString()) {
+      return res.status(400).json({ message: 'Administrators cannot delete themselves' });
+    }
+
+    // 1. Delete all submissions by this user
+    await Submission.deleteMany({ user: user._id });
+
+    // 2. Delete the user
+    await user.deleteOne();
+
+    res.json({ message: 'User and all associated data deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;

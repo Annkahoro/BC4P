@@ -226,7 +226,7 @@ const RegistrationForm = () => {
         />
       </Field>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* County — locked to Murang'a only */}
         <Field label="County">
           <select
@@ -346,17 +346,17 @@ const LandingPage = () => {
         <img
           src={LOGO}
           alt="BC4P Logo"
-          className="w-40 h-40 rounded-full border-4 border-primary shadow-2xl mb-8 object-cover"
+          className="w-28 h-28 md:w-40 md:h-40 rounded-full border-4 border-primary shadow-2xl mb-8 object-cover"
         />
 
         <span className="inline-block bg-primary/20 text-primary text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
           Build Community for Posterity
         </span>
 
-        <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-6 max-w-3xl">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight mb-6 max-w-4xl tracking-tighter uppercase sm:normal-case">
           Preserving the{' '}
           <span className="text-primary">Gīkūyū</span>{' '}
-          Heritage for the Next Generation
+          Heritage for Posterity
         </h1>
 
         <p className="text-lg text-gray-400 max-w-xl mb-10 font-medium leading-relaxed">
@@ -365,18 +365,18 @@ const LandingPage = () => {
           ancestral corridor.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
           <a
             href="#register"
             onClick={e => { e.preventDefault(); scrollTo('register'); }}
-            className="bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary-dark transition-colors flex items-center gap-2"
+            className="w-full sm:w-auto bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary-dark transition-colors flex items-center justify-center gap-2 shadow-xl shadow-primary/20"
           >
             Start Documenting <ArrowRight size={18} />
           </a>
           <a
             href="#pillars"
             onClick={e => { e.preventDefault(); scrollTo('pillars'); }}
-            className="bg-white/10 text-white font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors border border-white/20"
+            className="w-full sm:w-auto bg-white/10 text-white font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors border border-white/20 text-sm md:text-base flex items-center justify-center"
           >
             Explore the 5 Pillars
           </a>
@@ -392,17 +392,17 @@ const LandingPage = () => {
       </section>
 
       {/* ── STATS BAR ── */}
-      <div className="bg-primary py-10">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white px-6">
+      <div className="bg-primary py-12 md:py-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center text-white px-6">
           {[
-            ['12,731', 'Acres of Ancestral Land'],
+            ['12,731', 'Acres of Land'],
             ['5', 'Documentation Pillars'],
-            ['47', 'Sub-Counties Covered'],
-            ['∞', 'Stories to Preserve'],
+            ['47', 'Town Hubs Covered'],
+            ['∞', 'Knowledge Nodes'],
           ].map(([num, label]) => (
-            <div key={label}>
-              <div className="text-4xl font-black">{num}</div>
-              <div className="text-sm text-green-100 mt-1 font-medium">{label}</div>
+            <div key={label} className="group">
+              <div className="text-4xl md:text-5xl font-black mb-1 group-hover:scale-110 transition-transform inline-block">{num}</div>
+              <div className="text-[10px] md:text-xs text-white/70 font-black uppercase tracking-widest">{label}</div>
             </div>
           ))}
         </div>
@@ -509,13 +509,13 @@ const LandingPage = () => {
             {/* Left: value prop */}
             <div className="space-y-8">
               <div>
-                <span className="text-primary text-xs font-black uppercase tracking-widest">
+                <span className="text-primary text-xs font-black uppercase tracking-[0.2em]">
                   Join the Corridor
                 </span>
-                <h2 className="text-4xl md:text-5xl font-black text-secondary mt-2 leading-tight">
+                <h2 className="text-4xl md:text-6xl font-black text-secondary mt-2 leading-tight tracking-tighter uppercase md:normal-case">
                   Become a Contributor
                 </h2>
-                <p className="text-gray-500 mt-4 max-w-md text-base font-medium leading-relaxed">
+                <p className="text-gray-500 mt-4 max-w-md text-base md:text-lg font-medium leading-relaxed">
                   Registration is free. Your contributions directly enrich the BC4P data
                   archive and help shape the governance of ancestral land for future generations.
                 </p>

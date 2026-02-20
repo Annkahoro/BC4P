@@ -13,10 +13,10 @@
     - [x] Auth Routes with specialized logic <!-- id: 12.1 -->
     - [x] Submission API with multi-pillar logic <!-- id: 13 -->
     - [x] Multi-media upload API (Cloudinary) <!-- id: 14 -->
-    - [ ] Admin Review and Filtering APIs <!-- id: 15 -->
-- [ ] Verification (Backend) <!-- id: 16 -->
-    - [/] Seed Super Admin account <!-- id: 16.1 -->
-    - [ ] Test all API endpoints <!-- id: 17 -->
+    - [x] Admin Review and Filtering APIs <!-- id: 15 -->
+- [x] Verification (Backend) <!-- id: 16 -->
+    - [x] Seed Super Admin account <!-- id: 16.1 -->
+    - [x] Test all API endpoints <!-- id: 17 -->
 - [ ] Frontend Implementation (React) <!-- id: 18 -->
     - [x] Contributor Dashboard with full CDUD (Edit resets Approved status) <!-- id: 18.1 -->
     - [x] Optimized Multi-File Upload (Unique Filenames) <!-- id: 18.2 -->
@@ -35,5 +35,7 @@
 - [x] UI/UX Polish <!-- id: 22 -->
     - [x] Implement Premium Toast Notification System <!-- id: 22.1 -->
     - [x] Replace all alerts with Custom Popups <!-- id: 22.2 -->
-    - [ ] Add Password Visibility Toggle (Eye Icon) to Login Pages <!-- id: 22.3 -->
-    - [ ] Make Admin Dashboard & Sidebar Responsive for Mobile <!-- id: 22.4 -->
+    - [x] Add Password Visibility Toggle (Eye Icon) to Login Pages <!-- id: 22.3 -->
+    - [x] Make Admin Dashboard & Sidebar Responsive for Mobile <!-- id: 22.4 -->
+    - [ ] Make Navbar & Landing Page Responsive for Mobile <!-- id: 22.5 -->
+    - [ ] Make Contributor Dashboard & Workspace Responsive for Mobile <!-- id: 22.6 -->

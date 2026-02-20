@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import LOGO from '../assets/LOGO.jpeg';
@@ -6,9 +6,10 @@ import {
   LayoutDashboard,
   FileStack,
   Users,
-  Download,
   LogOut,
   ShieldCheck,
+  Menu,
+  X,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -21,17 +22,41 @@ const AdminLayout = ({ children }) => {
   const { userInfo, logout } = useAuth();
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleLogout = () => { logout(); navigate('/'); };
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-50 flex-col md:flex-row">
+
+      {/* ── Mobile Header ── */}
+      <div className="md:hidden bg-secondary text-white p-4 flex items-center justify-between sticky top-0 z-[60] border-b border-white/10">
+        <div className="flex items-center gap-2">
+            <img src={LOGO} alt="BC4P" className="w-8 h-8 rounded-full border border-primary shrink-0" />
+            <span className="font-black text-sm uppercase tracking-tighter">BC4P Admin</span>
+        </div>
+        <button onClick={toggleSidebar} className="p-1 hover:bg-white/10 rounded-lg transition-colors">
+            {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* ── Sidebar Backdrop (Mobile) ── */}
+      {isSidebarOpen && (
+        <div 
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[50] md:hidden"
+            onClick={toggleSidebar}
+        />
+      )}
 
       {/* ── Sidebar ── */}
-      <aside className="w-64 bg-secondary text-white flex flex-col shrink-0 sticky top-0 h-screen overflow-y-auto">
+      <aside className={`
+        fixed inset-y-0 left-0 w-64 bg-secondary text-white flex flex-col z-[55] transform transition-transform duration-300 md:relative md:translate-x-0 md:h-screen
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
+      `}>
 
-        {/* Logo */}
-        <div className="flex items-center gap-3 px-6 py-6 border-b border-white/10">
+        {/* Logo (Desktop Only) */}
+        <div className="hidden md:flex items-center gap-3 px-6 py-8 border-b border-white/10">
           <img src={LOGO} alt="BC4P" className="w-10 h-10 rounded-full object-cover border-2 border-primary" />
           <div>
             <p className="text-sm font-black text-white">BC4P Admin</p>
@@ -40,7 +65,7 @@ const AdminLayout = ({ children }) => {
         </div>
 
         {/* User badge */}
-        <div className="px-6 py-4 border-b border-white/10">
+        <div className="px-6 py-4 border-b border-white/10 mt-16 md:mt-0">
           <div className="flex items-center gap-3 bg-primary/10 rounded-xl px-3 py-2">
             {userInfo?.profilePicture ? (
               <img 
@@ -66,6 +91,7 @@ const AdminLayout = ({ children }) => {
               <Link
                 key={path}
                 to={path}
+                onClick={() => setIsSidebarOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all ${
                   active
                     ? 'bg-primary text-white shadow-lg shadow-primary/20'
@@ -92,7 +118,7 @@ const AdminLayout = ({ children }) => {
       </aside>
 
       {/* ── Main Content ── */}
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto max-w-full">
         {children}
       </main>
     </div>

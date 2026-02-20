@@ -35,3 +35,5 @@
 - [x] UI/UX Polish <!-- id: 22 -->
     - [x] Implement Premium Toast Notification System <!-- id: 22.1 -->
     - [x] Replace all alerts with Custom Popups <!-- id: 22.2 -->
+    - [ ] Add Password Visibility Toggle (Eye Icon) to Login Pages <!-- id: 22.3 -->
+    - [ ] Make Admin Dashboard & Sidebar Responsive for Mobile <!-- id: 22.4 -->

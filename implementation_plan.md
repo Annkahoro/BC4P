@@ -18,3 +18,5 @@ This plan outlines the technical approach for building the BC4P Data Collection 
 *   [x] Admin Seed Script Created
 *   [x] Auth Routes (Register, Phone Login, Admin Login)
 *   [x] Submission API (Multi-media + Metadata)
+*   [ ] UI Enhancement - Password Visibility Toggle (Admin Login)
+*   [ ] Responsive Optimization - Admin Dashboard & Sidebar for Mobile

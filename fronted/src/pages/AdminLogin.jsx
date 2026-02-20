@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/api';
 import { useAuth } from '../context/AuthContext';
+import { Eye, EyeOff, Lock } from 'lucide-react';
 
 const AdminLogin = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -32,9 +34,7 @@ const AdminLogin = () => {
       <div className="w-full max-w-md bg-white p-10 rounded-2xl shadow-3xl">
         <div className="flex justify-center mb-6">
             <div className="p-3 bg-primary/10 rounded-full">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+                <Lock className="w-12 h-12 text-primary" />
             </div>
         </div>
         <h2 className="text-3xl font-black text-secondary mb-1 text-center uppercase tracking-tighter">Admin Portal</h2>
@@ -52,14 +52,21 @@ const AdminLogin = () => {
               placeholder="admin@bc4p.com"
             />
           </div>
-          <div>
+          <div className="relative">
             <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Secure Password</label>
             <input 
-              type="password" required
+              type={showPassword ? 'text' : 'password'} required
               value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})}
               className="w-full px-5 py-4 rounded-xl bg-gray-100 focus:bg-white border-2 border-transparent focus:border-primary outline-none transition-all font-semibold"
               placeholder="••••••••"
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 top-[38px] text-gray-400 hover:text-primary transition-colors focus:outline-none"
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
           </div>
 
           <button 

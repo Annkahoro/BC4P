@@ -20,5 +20,5 @@ This plan outlines the technical approach for building the BC4P Data Collection 
 *   [x] Submission API (Multi-media + Metadata)
 *   [x] UI Enhancement - Password Visibility Toggle (Admin Login)
 *   [x] Responsive Optimization - Admin Dashboard & Sidebar for Mobile
-*   [ ] Responsive Optimization - Navbar & Landing Page for Mobile
-*   [ ] Responsive Optimization - Contributor Dashboard & Submission Workspace for Mobile
+*   [x] Responsive Optimization - Navbar & Landing Page for Mobile
+*   [x] Responsive Optimization - Contributor Dashboard & Submission Workspace for Mobile

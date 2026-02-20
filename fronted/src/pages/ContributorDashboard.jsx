@@ -51,11 +51,11 @@ const ContributorDashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       <header className="mb-12">
-        <h1 className="text-4xl font-black text-secondary mb-2">My Documentations</h1>
-        <div className="flex items-center gap-4 text-gray-500 font-medium">
-            <p>Capture and manage your heritage data contributions.</p>
+        <h1 className="text-3xl md:text-4xl font-black text-secondary mb-2 uppercase tracking-tighter">My Registry</h1>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-500 font-medium">
+            <p className="text-sm">Capture and manage your heritage data contributions.</p>
             {userInfo?.clan && (
-                <span className="bg-primary/10 text-primary text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest pt-1.5">
+                <span className="w-fit bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest pt-1.5 border border-primary/20">
                     {userInfo.clan} Clan
                 </span>
             )}
@@ -66,17 +66,17 @@ const ContributorDashboard = () => {
       <h2 className="text-xl font-bold text-secondary mb-6 flex items-center gap-2">
         <PlusCircle className="text-primary" /> Start New Submission
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-16 px-1">
         {pillars.map((pillar) => (
           <Link 
             key={pillar.name}
             to={`/submit/${pillar.name}`}
-            className="group relative overflow-hidden bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 text-center"
+            className="group relative overflow-hidden bg-white p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 text-center active:scale-95"
           >
-            <div className={`w-16 h-16 ${pillar.color} rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+            <div className={`w-12 h-12 md:w-16 md:h-16 ${pillar.color} rounded-full flex items-center justify-center text-2xl md:text-3xl mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-black/10`}>
               {pillar.icon}
             </div>
-            <h3 className="font-bold text-secondary">{pillar.name}</h3>
+            <h3 className="font-bold text-secondary text-sm md:text-base">{pillar.name}</h3>
             <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
         ))}

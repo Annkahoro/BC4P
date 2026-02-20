@@ -159,11 +159,12 @@ const SubmissionWorkspace = () => {
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> BACK TO DASHBOARD
         </button>
 
-        <header className="mb-12">
-          <span className="bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">
+        <header className="mb-10 px-2">
+          <span className="bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block border border-primary/20">
             {pillar} Workspace
           </span>
-          <h1 className="text-5xl font-black text-secondary tracking-tighter uppercase">Structured Documentation</h1>
+          <h1 className="text-3xl md:text-5xl font-black text-secondary tracking-tighter uppercase leading-tight">Structured Documentation</h1>
+          <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.2em] mt-2 italic">Capture every detail for posterity</p>
         </header>
 
         <form onSubmit={handleSubmit} className="space-y-8">
@@ -280,7 +281,7 @@ const SubmissionWorkspace = () => {
           {/* SECTION D & E */}
           <div className="grid md:grid-cols-2 gap-8">
             <Section num="D" title="Context Metadata">
-                <div className="space-y-4">
+                <div className="space-y-6">
                     <div>
                         <label className="label">Is this practice still active?</label>
                         <select 
@@ -309,7 +310,7 @@ const SubmissionWorkspace = () => {
                     <label className="flex items-center gap-4 cursor-pointer">
                         <input 
                             type="checkbox" 
-                            className="w-6 h-6 rounded-lg text-primary focus:ring-primary"
+                            className="w-6 h-6 rounded-lg text-primary focus:ring-primary shrink-0"
                             checked={formData.isLinkedToAncestralLand}
                             onChange={e => setFormData({...formData, isLinkedToAncestralLand: e.target.checked})}
                         />
@@ -319,7 +320,7 @@ const SubmissionWorkspace = () => {
                         </div>
                     </label>
                 </div>
-                <div className="mt-4">
+                <div className="mt-6">
                     <label className="label">Metadata Tags (Comma separated)</label>
                     <input 
                         type="text" className="input" placeholder="ritual, medicine, elders..."
@@ -331,7 +332,7 @@ const SubmissionWorkspace = () => {
 
           <button 
             type="submit" disabled={loading}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-6 text-xl rounded-xl shadow-lg transition-colors"
+            className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-5 md:py-6 text-lg md:text-xl rounded-2xl shadow-xl transition-all active:scale-95 shadow-primary/20"
           >
             {loading ? 'Transmitting Data Pulse...' : 'COMPLETE SUBMISSION'}
           </button>

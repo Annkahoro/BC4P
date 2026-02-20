@@ -66,14 +66,14 @@ const AdminDashboard = () => {
   return (
     <AdminLayout>
       <div className="max-w-7xl mx-auto px-6 py-10">
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4 transition-all">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6 transition-all">
           <div>
-            <h1 className="text-4xl font-black text-secondary tracking-tighter uppercase">Command Center</h1>
+            <h1 className="text-3xl md:text-4xl font-black text-secondary tracking-tighter uppercase">Command Center</h1>
             <p className="text-gray-500 font-bold uppercase text-[10px] tracking-[0.2em] mt-1">Real-time Data Intelligence & Governance</p>
           </div>
           <button 
             onClick={handleExport}
-            className="bg-secondary hover:bg-secondary-light text-white font-bold flex items-center gap-2 py-3 px-6 rounded-xl shadow-xl transition-colors text-sm"
+            className="w-full md:w-auto bg-secondary hover:bg-secondary-light text-white font-bold flex items-center justify-center gap-2 py-4 px-6 rounded-xl shadow-xl transition-colors text-sm"
           >
             <Download size={16} /> Export Data Report
           </button>

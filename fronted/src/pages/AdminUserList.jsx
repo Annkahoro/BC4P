@@ -47,7 +47,7 @@ const AdminUserList = () => {
     <AdminLayout>
       <div className="max-w-7xl mx-auto px-6 py-10">
         <header className="mb-12">
-            <h1 className="text-4xl font-black text-secondary tracking-tighter uppercase mb-2 flex items-center gap-4">
+            <h1 className="text-3xl md:text-4xl font-black text-secondary tracking-tighter uppercase mb-2 flex flex-col sm:flex-row sm:items-center gap-4">
                 <Users className="text-primary" /> Contributor Network
             </h1>
             <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.4em]">Master Registry of active documented agents</p>

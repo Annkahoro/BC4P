@@ -61,11 +61,11 @@ const AdminSubmissionList = () => {
       <div className="max-w-7xl mx-auto px-6 py-10">
         <header className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
-            <h1 className="text-4xl font-black text-secondary tracking-tighter uppercase mb-2">Submission Registry</h1>
+            <h1 className="text-3xl md:text-4xl font-black text-secondary tracking-tighter uppercase mb-2">Submission Registry</h1>
             <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.4em]">Comprehensive database of all documented data nodes</p>
           </div>
           
-          <div className="flex flex-wrap gap-3 w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto mt-6 md:mt-0">
             <FilterSelect 
               value={filters.pillar} 
               onChange={e => setFilters({...filters, pillar: e.target.value})}
@@ -162,7 +162,7 @@ const FilterSelect = ({ value, onChange, options, placeholder }) => (
   <select 
     value={value} 
     onChange={onChange}
-    className="bg-white border border-gray-200 text-xs font-bold uppercase tracking-widest px-4 py-2.5 rounded-xl outline-none focus:border-primary transition-all text-secondary"
+    className="w-full sm:w-auto bg-white border border-gray-200 text-xs font-bold uppercase tracking-widest px-4 py-3 rounded-xl outline-none focus:border-primary transition-all text-secondary"
   >
     <option value="">{placeholder}</option>
     {options.map(opt => <option key={opt} value={opt}>{opt}</option>)}

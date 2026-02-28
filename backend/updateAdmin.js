@@ -2,7 +2,8 @@ const User = require('./models/User');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
-dotenv.config();
+// Specify the correct path for .dotenv config
+dotenv.config({ path: './backend/.env' });
 
 const updateAdmin = async () => {
   try {

@@ -2,11 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const syncAdmin = require('./seedAdmin');
 
 const app = express();
 
 // Connect to Database
-connectDB();
+connectDB().then(() => {
+    // Sync admin credentials on startup
+    syncAdmin();
+});
 
 // Middleware
 app.use(cors());

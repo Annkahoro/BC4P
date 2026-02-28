@@ -397,7 +397,7 @@ const LandingPage = () => {
           {[
             ['12,731', 'Acres of Land'],
             ['5', 'Documentation Pillars'],
-            ['47', 'Town Hubs Covered'],
+            ['14', 'Town Hubs Covered'],
             ['∞', 'Knowledge Nodes'],
           ].map(([num, label]) => (
             <div key={label} className="group">

@@ -28,7 +28,7 @@ const AdminLayout = ({ children }) => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="flex min-h-screen bg-gray-50 flex-col md:flex-row">
+    <div className="flex min-h-screen bg-gray-50 flex-col md:flex-row h-screen overflow-hidden">
 
       {/* ── Mobile Header ── */}
       <div className="md:hidden bg-secondary text-white p-4 flex items-center justify-between sticky top-0 z-[60] border-b border-white/10">

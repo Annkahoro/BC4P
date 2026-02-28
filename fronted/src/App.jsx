@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import LandingPage from './pages/LandingPage';
 import ContributorLogin from './pages/ContributorLogin';
@@ -14,11 +14,12 @@ import Navbar from './components/Navbar';
 
 function App() {
   const { userInfo } = useAuth();
+  const { pathname } = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar userInfo={userInfo} />
-      <main className="flex-grow">
+      {!pathname.startsWith('/admin') && <Navbar userInfo={userInfo} />}
+      <main className="flex-grow flex flex-col">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />

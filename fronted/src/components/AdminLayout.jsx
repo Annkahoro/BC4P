@@ -28,7 +28,7 @@ const AdminLayout = ({ children }) => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="flex min-h-screen bg-gray-50 flex-col md:flex-row h-screen overflow-hidden">
+    <div className="flex bg-gray-50 flex-col md:flex-row h-full overflow-hidden">
 
       {/* ── Mobile Header ── */}
       <div className="md:hidden bg-secondary text-white p-4 flex items-center justify-between sticky top-0 z-[60] border-b border-white/10">
@@ -51,7 +51,7 @@ const AdminLayout = ({ children }) => {
 
       {/* ── Sidebar ── */}
       <aside className={`
-        fixed inset-y-0 left-0 w-64 bg-secondary text-white flex flex-col z-[55] transform transition-transform duration-300 md:sticky md:top-0 md:translate-x-0 md:h-screen
+        fixed inset-y-0 left-0 w-64 bg-secondary text-white flex flex-col z-[55] transform transition-transform duration-300 md:relative md:translate-x-0 md:h-full
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
       `}>
 

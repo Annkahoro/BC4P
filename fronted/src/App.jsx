@@ -17,9 +17,9 @@ function App() {
   const { pathname } = useLocation();
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {!pathname.startsWith('/admin') && <Navbar userInfo={userInfo} />}
-      <main className="flex-grow flex flex-col">
+    <div className="h-screen flex flex-col overflow-hidden">
+      <Navbar userInfo={userInfo} />
+      <main className="flex-grow overflow-hidden">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />

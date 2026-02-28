@@ -42,7 +42,8 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     // Required only for admins
-  }
+  },
+  passwordChangedAt: Date
 }, {
   timestamps: true
 });
@@ -52,8 +53,12 @@ userSchema.pre('save', async function() {
   if (!this.isModified('password') || !this.password) {
     return;
   }
+  
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
+  
+  // Set passwordChangedAt to now (1 second in the past to ensure JWT iat is after this)
+  this.passwordChangedAt = Date.now() - 1000;
 });
 
 // Method to compare password

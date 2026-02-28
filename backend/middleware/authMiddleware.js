@@ -8,7 +8,22 @@ const protect = async (req, res, next) => {
     try {
       token = req.headers.authorization.split(' ')[1];
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      req.user = await User.findById(decoded.id).select('-password');
+      
+      const user = await User.findById(decoded.id).select('-password');
+      
+      if (!user) {
+        return res.status(401).json({ message: 'User no longer exists' });
+      }
+
+      // Check if password was changed after the token was issued
+      if (user.passwordChangedAt) {
+        const changedTimestamp = parseInt(user.passwordChangedAt.getTime() / 1000, 10);
+        if (decoded.iat < changedTimestamp) {
+          return res.status(401).json({ message: 'User recently changed password. Please log in again.' });
+        }
+      }
+
+      req.user = user;
       next();
     } catch (error) {
       console.error(error);

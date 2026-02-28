@@ -6,7 +6,7 @@ const { protect } = require('../middleware/authMiddleware');
 const { upload } = require('../config/cloudinary');
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '20m' });
 };
 
 // @desc    Register a new user (Ordinary User)

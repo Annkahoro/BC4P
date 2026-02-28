@@ -27,4 +27,17 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      if (error.response.data && error.response.data.message === 'User recently changed password. Please log in again.') {
+        // Dispatch custom event for password change logout
+        window.dispatchEvent(new CustomEvent('auth:session-invalid'));
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
 export default api;

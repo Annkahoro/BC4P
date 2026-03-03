@@ -109,7 +109,7 @@ const PILLAR_DATA = [
     accent: '#27ae60',
     description: `Preserve indigenous knowledge about the land — sacred sites, water management
       systems, soil practices, and relationships with native flora & fauna across the
-      12,731-acre Gīkūyū ancestral corridor.`,
+      70,000-acre Gīkūyū ancestral corridor.`,
     whatYouCapture: [
       'Sacred groves & land boundaries',
       'Water sources & management',
@@ -364,7 +364,7 @@ const LandingPage = () => {
 
         <p className="text-lg text-gray-400 max-w-xl mb-10 font-medium leading-relaxed">
           A digital platform to document, preserve and govern Political, Economic, Social,
-          Technological, Environmental and Legal knowledge across the 12,731‑acre
+          Technological, Environmental and Legal knowledge across the 70,000‑acre
           ancestral corridor.
         </p>
 

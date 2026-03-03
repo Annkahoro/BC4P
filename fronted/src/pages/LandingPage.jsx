@@ -398,9 +398,9 @@ const LandingPage = () => {
       <div className="bg-primary py-12 md:py-16">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center text-white px-6">
           {[
-            ['12,731', 'Acres of Land'],
+            ['70,000', 'Acres of Land'],
             ['6', 'Documentation Pillars'],
-            ['14', 'Town Hubs Covered'],
+            ['32', 'Town Hubs Covered'],
             ['∞', 'Knowledge Nodes'],
           ].map(([num, label]) => (
             <div key={label} className="group">

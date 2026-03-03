@@ -17,9 +17,9 @@ function App() {
   const { pathname } = useLocation();
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
+    <div className="h-screen flex flex-col">
       <Navbar userInfo={userInfo} />
-      <main className="flex-grow overflow-hidden">
+      <main className="flex-grow overflow-y-auto">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />

@@ -24,7 +24,7 @@ const testBackend = async () => {
       const userReg = await axios.post(`${API_URL}/auth/register`, {
         name: 'Test Contributor',
         phone: testUserPhone,
-        location: { county: 'Muranga', subCounty: 'Kandara' }
+        location: JSON.stringify({ county: 'Muranga', subCounty: 'Kandara' })
       });
       userToken = userReg.data.token;
       console.log('✅ User Registration Successful');
@@ -45,7 +45,7 @@ const testBackend = async () => {
       `${API_URL}/submissions`,
       {
         title: 'Traditional Medicine Ritual',
-        pillar: 'Cultural',
+        pillar: 'Social',
         category: 'Rituals & Ceremonies',
         description: 'Detailed description of a local ritual...',
         location: JSON.stringify({ county: 'Muranga', subCounty: 'Kandara' }),

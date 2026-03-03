@@ -27,11 +27,12 @@ const ContributorDashboard = () => {
   }, []);
 
   const pillars = [
-    { name: 'Cultural', color: 'bg-orange-500', icon: '🏛️' },
-    { name: 'Social', color: 'bg-blue-500', icon: '🤝' },
+    { name: 'Political', color: 'bg-orange-500', icon: '⚖️' },
     { name: 'Economic', color: 'bg-green-600', icon: '💰' },
+    { name: 'Social', color: 'bg-blue-500', icon: '🤝' },
+    { name: 'Technological', color: 'bg-purple-500', icon: '⚙️' },
     { name: 'Environmental', color: 'bg-emerald-500', icon: '🌿' },
-    { name: 'Technical', color: 'bg-purple-500', icon: '⚙️' },
+    { name: 'Legal', color: 'bg-red-500', icon: '📜' },
   ];
 
   /* ── Delete Logic ── */
@@ -66,7 +67,7 @@ const ContributorDashboard = () => {
       <h2 className="text-xl font-bold text-secondary mb-6 flex items-center gap-2">
         <PlusCircle className="text-primary" /> Start New Submission
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-16 px-1">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16 px-1">
         {pillars.map((pillar) => (
           <Link 
             key={pillar.name}

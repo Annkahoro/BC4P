@@ -26,53 +26,27 @@ import {
    ────────────────────────────────────────────── */
 const PILLAR_DATA = [
   {
-    id: 'cultural',
-    label: 'Section 01 — Cultural',
-    title: 'Cultural Heritage',
+    id: 'political',
+    label: 'Section 01 — Political',
+    title: 'Political Governance',
     icon: Globe,
     accent: '#e67e22',
-    description: `Document the oral traditions, elder wisdom, ceremonies, arts, and belief systems
-      that form the living cultural fabric of the Gīkūyū people. Every story, proverb,
-      and ritual you capture becomes part of a permanent, searchable heritage archive.`,
+    description: `Document the leadership structures, advocacy networks, community policies, and 
+      institutional relationships that represent our collective voice and power.
+      These systems ensure our sovereignty and effective representation in a modern landscape.`,
     whatYouCapture: [
-      'Origin stories & clan genealogies',
-      'Language proverbs & oral traditions',
-      'Traditional medicine & healing arts',
-      'Rites of passage & ceremonies',
-      'Arts, craftsmanship & performance',
-      'Beliefs, values & moral codes',
+      'Governance & Leadership models',
+      'Advocacy & Representation networks',
+      'Community-led Policy frameworks',
+      'Institutional & Inter-clan relations',
+      'Conflict resolution & Peacebuilding',
+      'Sovereignty & Autonomy structures',
     ],
-    // ── PILLAR 1 IMAGE (Cultural) ─────────────────────────────────────────────
-    // To change: replace the URL below with any image URL, or a local path like:
-    // image: '/images/cultural.jpg'   (put the file in the fronted/public/images/ folder)
     image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&auto=format&fit=crop&q=80',
-    // ─────────────────────────────────────────────────────────────────────────
-  },
-  {
-    id: 'social',
-    label: 'Section 02 — Social',
-    title: 'Social Wellness',
-    icon: Users,
-    accent: '#2980b9',
-    description: `Map the invisible social infrastructure that keeps communities together —
-      leadership structures, kinship networks, education channels, and systems of
-      collective care. These living relationships underpin everything we build.`,
-    whatYouCapture: [
-      'Family & clan kinship structures',
-      'Community leadership systems',
-      'Traditional education channels',
-      'Conflict resolution methods',
-      'Social health & wellness practices',
-      'Festivals, feasts & communal events',
-    ],
-    // ── PILLAR 2 IMAGE (Social) ──────────────────────────────────────────────
-    // To change: replace the URL below with any image URL or local path
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&auto=format&fit=crop&q=80',
-    // ─────────────────────────────────────────────────────────────────────────
   },
   {
     id: 'economic',
-    label: 'Section 03 — Economic',
+    label: 'Section 02 — Economic',
     title: 'Economic Prosperity',
     icon: DollarSign,
     accent: '#6c5ce7',
@@ -87,14 +61,49 @@ const PILLAR_DATA = [
       'Savings & barter traditions',
       'Cooperative & communal economics',
     ],
-    // ── PILLAR 3 IMAGE (Economic) ────────────────────────────────────────────
-    // To change: replace the URL below with any image URL or local path
     image: 'https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=900&auto=format&fit=crop&q=80',
-    // ─────────────────────────────────────────────────────────────────────────
+  },
+  {
+    id: 'social',
+    label: 'Section 03 — Social',
+    title: 'Social Heritage',
+    icon: Users,
+    accent: '#2980b9',
+    description: `Map the living cultural fabric and social infrastructure—from oral traditions 
+      and elder wisdom to kinship networks and collective care. This unified pillar 
+      captures the essence of our identity and communal wellness.`,
+    whatYouCapture: [
+      'Origin stories & clan genealogies',
+      'Language proverbs & oral traditions',
+      'Traditional medicine & healing arts',
+      'Family & clan kinship structures',
+      'Traditional education & skill transfer',
+      'Festivals, ritual ceremonies & gatherings',
+    ],
+    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'technological',
+    label: 'Section 04 — Technological',
+    title: 'Technological Innovation',
+    icon: Cpu,
+    accent: '#8e44ad',
+    description: `Archive the technical ingenuity embedded in traditional construction,
+      tool-making, food processing, and water engineering — systems refined over
+      centuries and now ready to be integrated with modern technology.`,
+    whatYouCapture: [
+      'Traditional construction techniques',
+      'Indigenous tool making',
+      'Food processing & preservation',
+      'Water engineering & irrigation',
+      'Navigation & land surveying',
+      'Material science & metallurgy',
+    ],
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop&q=80',
   },
   {
     id: 'environmental',
-    label: 'Section 04 — Environmental',
+    label: 'Section 05 — Environmental',
     title: 'Environmental Stewardship',
     icon: Leaf,
     accent: '#27ae60',
@@ -109,32 +118,26 @@ const PILLAR_DATA = [
       'Climate indicators & reading nature',
       'Ancestral land use agreements',
     ],
-    // ── PILLAR 4 IMAGE (Environmental) ──────────────────────────────────────
-    // To change: replace the URL below with any image URL or local path
     image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=900&auto=format&fit=crop&q=80',
-    // ─────────────────────────────────────────────────────────────────────────
   },
   {
-    id: 'technical',
-    label: 'Section 05 — Technical',
-    title: 'Technical Innovation',
-    icon: Cpu,
-    accent: '#8e44ad',
-    description: `Archive the technical ingenuity embedded in traditional construction,
-      tool-making, food processing, and water engineering — systems refined over
-      centuries and now ready to be integrated with modern technology.`,
+    id: 'legal',
+    label: 'Section 06 — Legal',
+    title: 'Legal Governance',
+    icon: MapPin,
+    accent: '#e74c3c',
+    description: `Document the customary laws, land rights, intellectual property protections, 
+      and regulatory compliance frameworks that safeguard our heritage and resources.
+      This pillar ensures our traditions are recognized and protected legally.`,
     whatYouCapture: [
-      'Traditional construction techniques',
-      'Indigenous tool making',
-      'Food processing & preservation',
-      'Water engineering & irrigation',
-      'Navigation & land surveying',
-      'Material science & metallurgy',
+      'Customary Law & local justice',
+      'Land rights & ancestral titles',
+      'Intellectual Property of traditions',
+      'Regulatory compliance frameworks',
+      'Agreements & boundary pacts',
+      'Protection of sacred knowledge',
     ],
-    // ── PILLAR 5 IMAGE (Technical) ──────────────────────────────────────────
-    // To change: replace the URL below with any image URL or local path
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop&q=80',
-    // ─────────────────────────────────────────────────────────────────────────
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&auto=format&fit=crop&q=80',
   },
 ];
 
@@ -360,8 +363,8 @@ const LandingPage = () => {
         </h1>
 
         <p className="text-lg text-gray-400 max-w-xl mb-10 font-medium leading-relaxed">
-          A digital platform to document, preserve and govern cultural, social,
-          economic, environmental and technical knowledge across the 12,731‑acre
+          A digital platform to document, preserve and govern Political, Economic, Social,
+          Technological, Environmental and Legal knowledge across the 12,731‑acre
           ancestral corridor.
         </p>
 
@@ -378,7 +381,7 @@ const LandingPage = () => {
             onClick={e => { e.preventDefault(); scrollTo('pillars'); }}
             className="w-full sm:w-auto bg-white/10 text-white font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors border border-white/20 text-sm md:text-base flex items-center justify-center"
           >
-            Explore the 5 Pillars
+            Explore the 6 Pillars
           </a>
         </div>
 
@@ -396,7 +399,7 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center text-white px-6">
           {[
             ['12,731', 'Acres of Land'],
-            ['5', 'Documentation Pillars'],
+            ['6', 'Documentation Pillars'],
             ['14', 'Town Hubs Covered'],
             ['∞', 'Knowledge Nodes'],
           ].map(([num, label]) => (
@@ -416,10 +419,10 @@ const LandingPage = () => {
               What You Will Document
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-secondary mt-2 leading-tight">
-              The 5 Pillars of Knowledge
+              The 6 Pillars of Knowledge
             </h2>
             <p className="text-gray-500 mt-4 max-w-xl text-base font-medium">
-              Every contribution you make is categorised under one of five core pillars.
+              Every contribution you make is categorised under one of six core pillars.
               Here is exactly what each one covers.
             </p>
           </div>

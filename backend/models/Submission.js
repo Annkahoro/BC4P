@@ -23,7 +23,7 @@ const submissionSchema = new mongoose.Schema({
   pillar: {
     type: String,
     required: true,
-    enum: ['Cultural', 'Social', 'Economic', 'Environmental', 'Technical']
+    enum: ['Political', 'Economic', 'Social', 'Technological', 'Environmental', 'Legal']
   },
   category: String, // e.g., Origin & Identity for Cultural
   description: String, // Rich text content (Section B)

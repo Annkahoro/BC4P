@@ -1,18 +1,9 @@
 export const PILLARS = {
-  Cultural: [
-    'Origin & Identity',
-    'Language & Oral Traditions',
-    'Beliefs & Values',
-    'Rituals & Ceremonies',
-    'Arts & Craftsmanship',
-    'Traditional Medicine'
-  ],
-  Social: [
-    'Family & Kinship',
-    'Community Leadership',
-    'Education & Skill Transfer',
-    'Social Wellness',
-    'Festivals & Gatherings'
+  Political: [
+    'Governance & Leadership',
+    'Advocacy & Representation',
+    'Community Policies',
+    'Institutional Relations'
   ],
   Economic: [
     'Traditional Commerce',
@@ -21,6 +12,26 @@ export const PILLARS = {
     'Local Industries',
     'Sustainable Cooperatives'
   ],
+  Social: [
+    'Origin & Identity',
+    'Language & Oral Traditions',
+    'Beliefs & Values',
+    'Rituals & Ceremonies',
+    'Arts & Craftsmanship',
+    'Traditional Medicine',
+    'Family & Kinship',
+    'Community Leadership',
+    'Education & Skill Transfer',
+    'Social Wellness',
+    'Festivals & Gatherings'
+  ],
+  Technological: [
+    'Traditional Engineering',
+    'Food Processing Tech',
+    'Tool Making',
+    'Construction Techniques',
+    'Water Engineering'
+  ],
   Environmental: [
     'Ancestral Land Knowledge',
     'Water Resource Management',
@@ -28,12 +39,11 @@ export const PILLARS = {
     'Soil Preservation',
     'Climate Adaptation'
   ],
-  Technical: [
-    'Traditional Engineering',
-    'Food Processing Tech',
-    'Tool Making',
-    'Construction Techniques',
-    'Water Engineering'
+  Legal: [
+    'Customary Law',
+    'Land Rights & Titles',
+    'Intellectual Property',
+    'Regulatory Compliance'
   ]
 };
 

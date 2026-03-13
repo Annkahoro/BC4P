@@ -9,6 +9,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminSubmissionReview from './pages/AdminSubmissionReview';
 import AdminUserList from './pages/AdminUserList';
 import AdminSubmissionList from './pages/AdminSubmissionList';
+import AdminPillarOverview from './pages/AdminPillarOverview';
 import SubmissionWorkspace from './pages/SubmissionWorkspace';
 import Navbar from './components/Navbar';
 
@@ -39,6 +40,10 @@ function App() {
           <Route 
             path="/admin/dashboard" 
             element={userInfo && (userInfo.role === 'Admin' || userInfo.role === 'Super Admin') ? <AdminDashboard /> : <Navigate to="/admin" />} 
+          />
+          <Route 
+            path="/admin/overview" 
+            element={userInfo && (userInfo.role === 'Admin' || userInfo.role === 'Super Admin') ? <AdminPillarOverview /> : <Navigate to="/admin" />} 
           />
           <Route 
             path="/admin/submissions" 

@@ -69,7 +69,7 @@ const AdminSubmissionList = () => {
             <FilterSelect 
               value={filters.pillar} 
               onChange={e => setFilters({...filters, pillar: e.target.value})}
-              options={['Political', 'Economic', 'Social', 'Technological', 'Environmental', 'Legal']} 
+              options={['Political', 'Economic', 'Social', 'Technological', 'Environmental', 'Legal', 'Culture']} 
               placeholder="All Pillars"
             />
             <FilterSelect 
@@ -191,6 +191,7 @@ const getPillarColor = (pillar) => {
     'Technological': 'bg-purple-100 text-purple-600',
     'Environmental': 'bg-green-100 text-green-600',
     'Legal': 'bg-red-100 text-red-600',
+    'Culture': 'bg-yellow-100 text-yellow-600',
   };
   return colors[pillar] || 'bg-gray-100 text-gray-600';
 };

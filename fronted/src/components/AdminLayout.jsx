@@ -14,7 +14,8 @@ import {
 
 const NAV_ITEMS = [
   { label: 'Dashboard',    icon: LayoutDashboard, path: '/admin/dashboard' },
-  { label: 'All Data / Pillars',  icon: FileStack,       path: '/admin/submissions' },
+  { label: 'Pillar Overview', icon: FileStack,    path: '/admin/overview' },
+  { label: 'All Data Registry',  icon: FileStack, path: '/admin/submissions' },
   { label: 'Contributors', icon: Users,           path: '/admin/users' },
 ];
 

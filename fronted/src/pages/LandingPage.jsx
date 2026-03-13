@@ -121,6 +121,22 @@ const PILLAR_DATA = [
     image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=900&auto=format&fit=crop&q=80',
   },
   {
+    id: 'legal',
+    label: 'PILLAR 06 — Legal',
+    title: 'Legal Governance',
+    icon: MapPin,
+    accent: '#e74c3c',
+    description: `Document the customary laws, land rights, intellectual property protections, 
+      and regulatory compliance frameworks that safeguard our heritage and resources.
+      This pillar ensures our traditions are recognized and protected legally.`,
+    whatYouCapture: [
+      'Customary Law & local justice',
+      'Land rights & ancestral titles',
+      'Intellectual Property of traditions',
+      'Regulatory compliance frameworks',
+      'Agreements & boundary pacts',
+      'Protection of sacred knowledge',
+    ],
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&auto=format&fit=crop&q=80',
   },
   {

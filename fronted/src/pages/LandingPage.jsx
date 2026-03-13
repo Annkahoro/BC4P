@@ -27,7 +27,7 @@ import {
 const PILLAR_DATA = [
   {
     id: 'political',
-    label: 'Section 01 — Political',
+    label: 'PILLAR 01 — Political',
     title: 'Political Governance',
     icon: Globe,
     accent: '#e67e22',
@@ -46,7 +46,7 @@ const PILLAR_DATA = [
   },
   {
     id: 'economic',
-    label: 'Section 02 — Economic',
+    label: 'PILLAR 02 — Economic',
     title: 'Economic Prosperity',
     icon: DollarSign,
     accent: '#6c5ce7',
@@ -65,7 +65,7 @@ const PILLAR_DATA = [
   },
   {
     id: 'social',
-    label: 'Section 03 — Social',
+    label: 'PILLAR 03 — Social',
     title: 'Social Heritage',
     icon: Users,
     accent: '#2980b9',
@@ -84,7 +84,7 @@ const PILLAR_DATA = [
   },
   {
     id: 'technological',
-    label: 'Section 04 — Technological',
+    label: 'PILLAR 04 — Technological',
     title: 'Technological Innovation',
     icon: Cpu,
     accent: '#8e44ad',
@@ -103,7 +103,7 @@ const PILLAR_DATA = [
   },
   {
     id: 'environmental',
-    label: 'Section 05 — Environmental',
+    label: 'PILLAR 05 — Environmental',
     title: 'Environmental Stewardship',
     icon: Leaf,
     accent: '#27ae60',
@@ -121,23 +121,26 @@ const PILLAR_DATA = [
     image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=900&auto=format&fit=crop&q=80',
   },
   {
-    id: 'legal',
-    label: 'Section 06 — Legal',
-    title: 'Legal Governance',
-    icon: MapPin,
-    accent: '#e74c3c',
-    description: `Document the customary laws, land rights, intellectual property protections, 
-      and regulatory compliance frameworks that safeguard our heritage and resources.
-      This pillar ensures our traditions are recognized and protected legally.`,
-    whatYouCapture: [
-      'Customary Law & local justice',
-      'Land rights & ancestral titles',
-      'Intellectual Property of traditions',
-      'Regulatory compliance frameworks',
-      'Agreements & boundary pacts',
-      'Protection of sacred knowledge',
-    ],
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'culture',
+    label: 'PILLAR 07 — Culture',
+    title: 'Cultural Expressions',
+    icon: Globe,
+    accent: '#f1c40f',
+    description: `Document the tangible and intangible cultural heritage — from artifacts and culinary 
+      knowledge to recreation and performing arts — that define the living soul 
+      of the Gīkūyū people and their creative evolution.`,
+    whatYouCapture: [
+      'Material artifacts & objects',
+      'Sacred & cultural landscapes',
+      'Performing arts & music',
+      'Indigenous games & recreation',
+      'Traditional fashion & attire',
+      'Culinary heritage & food ways',
+    ],
+    image: 'https://images.unsplash.com/photo-1523810192022-5a0fb9aa7bc8?w=900&auto=format&fit=crop&q=80',
   },
 ];
 
@@ -381,7 +384,7 @@ const LandingPage = () => {
             onClick={e => { e.preventDefault(); scrollTo('pillars'); }}
             className="w-full sm:w-auto bg-white/10 text-white font-bold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors border border-white/20 text-sm md:text-base flex items-center justify-center"
           >
-            Explore the 6 Pillars
+            Explore the 7 Pillars
           </a>
         </div>
 
@@ -399,7 +402,7 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center text-white px-6">
           {[
             ['70,000', 'Acres of Land'],
-            ['6', 'Documentation Pillars'],
+            ['7', 'Documentation Pillars'],
             ['32', 'Town Hubs Covered'],
             ['∞', 'Knowledge Nodes'],
           ].map(([num, label]) => (
@@ -419,10 +422,10 @@ const LandingPage = () => {
               What You Will Document
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-secondary mt-2 leading-tight">
-              The 6 Pillars of Knowledge
+              The 7 PILLARS of Knowledge
             </h2>
             <p className="text-gray-500 mt-4 max-w-xl text-base font-medium">
-              Every contribution you make is categorised under one of six core pillars.
+              Every contribution you make is categorised under one of seven core PILLARS.
               Here is exactly what each one covers.
             </p>
           </div>

@@ -325,7 +325,7 @@ const MediaCard = ({ file, onExpand }) => {
 const Section = ({ title, children }) => (
   <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
     <h3 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
-      <span className="w-1.5 h-1.5 bg-primary rounded-full" /> {title}
+      <span className="w-1.5 h-1.5 bg-primary rounded-full" /> PILLAR: {title}
     </h3>
     {children}
   </div>

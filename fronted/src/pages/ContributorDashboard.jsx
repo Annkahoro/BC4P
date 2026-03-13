@@ -33,6 +33,7 @@ const ContributorDashboard = () => {
     { name: 'Technological', color: 'bg-purple-500', icon: '⚙️' },
     { name: 'Environmental', color: 'bg-emerald-500', icon: '🌿' },
     { name: 'Legal', color: 'bg-red-500', icon: '📜' },
+    { name: 'Culture', color: 'bg-yellow-500', icon: '🎨' },
   ];
 
   /* ── Delete Logic ── */

@@ -44,6 +44,14 @@ export const PILLARS = {
     'Land Rights & Titles',
     'Intellectual Property',
     'Regulatory Compliance'
+  ],
+  Culture: [
+    'Artifacts & Objects',
+    'Cultural Landscapes',
+    'Performing Arts',
+    'Recreation & Games',
+    'Fashion & Attire',
+    'Culinary Heritage'
   ]
 };
 

@@ -168,7 +168,7 @@ const SubmissionWorkspace = () => {
         </header>
 
         <form onSubmit={handleSubmit} className="space-y-8">
-          {/* SECTION A: BASIC INFO */}
+          {/* PILLAR A: BASIC INFO */}
           <Section num="A" title="Basic Entry Information">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="md:col-span-2">
@@ -228,7 +228,7 @@ const SubmissionWorkspace = () => {
             </div>
           </Section>
 
-          {/* SECTION B: NARRATIVE */}
+          {/* PILLAR B: NARRATIVE */}
           <Section num="B" title="Narrative Documentation">
             <div className="bg-white rounded-xl overflow-hidden border-2 border-gray-100">
                 <ReactQuill 
@@ -241,7 +241,7 @@ const SubmissionWorkspace = () => {
             </div>
           </Section>
 
-          {/* SECTION C: MEDIA */}
+          {/* PILLAR C: MEDIA */}
           <Section num="C" title="Evidence & Media Captures">
             <div className="grid md:grid-cols-2 gap-6">
                 <div className="border-2 border-dashed border-gray-200 rounded-3xl p-12 flex flex-col items-center justify-center bg-white group hover:border-primary transition-colors cursor-pointer relative">
@@ -348,7 +348,7 @@ const Section = ({ num, title, children }) => (
         <div className="bg-white/50 backdrop-blur-sm p-8 rounded-[40px] border border-gray-100/50 shadow-sm overflow-hidden">
             <h3 className="text-xs font-black text-gray-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
                 <span className="w-6 h-6 bg-secondary text-white rounded-full flex items-center justify-center text-[10px]">{num}</span>
-                {title}
+                PILLAR {num}: {title}
             </h3>
             {children}
         </div>

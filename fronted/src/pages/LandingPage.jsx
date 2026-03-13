@@ -7,6 +7,7 @@ import { REGISTRATION_COUNTY, MURANGA_SUB_COUNTIES, CLAN_DATA, TOWN_SPECIALIZATI
 // To change the logo: replace 'LOGO.jpeg' in src/assets/ with your new file
 // then update the filename here if it differs.
 import LOGO from '../assets/LOGO.jpeg';
+import CULTURE_IMAGE from '../assets/culture_pillar.png';
 // ─────────────────────────────────────────────────────────────────────────────
 import {
   ArrowRight,
@@ -156,7 +157,7 @@ const PILLAR_DATA = [
       'Traditional fashion & attire',
       'Culinary heritage & food ways',
     ],
-    image: 'https://images.unsplash.com/photo-1523810192022-5a0fb9aa7bc8?w=900&auto=format&fit=crop&q=80',
+    image: CULTURE_IMAGE,
   },
 ];
 
